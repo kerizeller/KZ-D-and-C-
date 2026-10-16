@@ -248,3 +248,15 @@ a.person:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
 .site-foot .fcols{grid-template-columns:1.5fr 1fr 1fr 1fr 1.25fr;gap:28px}
 @media(max-width:960px){.site-foot .fcols{grid-template-columns:1fr 1fr}}
 .profile .crumb{margin-bottom:.6em}
+/* v3.1: smaller team photos */
+.team-grid{grid-template-columns:repeat(3,1fr);gap:40px 36px}
+.person img,.person .ph{width:160px;max-width:100%;margin-bottom:14px}
+.profile{grid-template-columns:240px 1fr}
+.profile-photo,.profile .ph{max-width:240px}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr 1fr;gap:28px 20px}.profile{grid-template-columns:1fr}.profile-photo,.profile .ph{max-width:180px}}
+@media(max-width:520px){
+ .team-grid{grid-template-columns:1fr;gap:22px}
+ a.person{display:grid;grid-template-columns:84px 1fr;column-gap:16px;align-items:start}
+ a.person img,a.person .ph{width:84px;grid-row:1 / span 4;margin:0}
+ a.person>*:not(img):not(.ph){grid-column:2}
+}
