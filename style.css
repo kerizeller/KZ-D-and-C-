@@ -260,3 +260,10 @@ a.person:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
  a.person img,a.person .ph{width:84px;grid-row:1 / span 4;margin:0}
  a.person>*:not(img):not(.ph){grid-column:2}
 }
+/* v3.2: team photos scale with screen height so photo and text fit together */
+.person img,.person .ph{width:auto;height:clamp(110px,20vh,170px);aspect-ratio:4/5;max-width:100%}
+.profile{grid-template-columns:auto 1fr}
+.profile-photo,.profile .ph{width:auto;height:clamp(180px,42vh,320px);aspect-ratio:4/5;max-width:100%}
+@media(max-width:860px){.profile-photo,.profile .ph{height:clamp(150px,28vh,220px)}}
+@media(max-width:520px){a.person img,a.person .ph{width:76px;height:auto}}
+.person img,.person .ph,.profile-photo,.profile .ph{align-self:flex-start;justify-self:start}
