@@ -267,3 +267,6 @@ a.person:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
 @media(max-width:860px){.profile-photo,.profile .ph{height:clamp(150px,28vh,220px)}}
 @media(max-width:520px){a.person img,a.person .ph{width:76px;height:auto}}
 .person img,.person .ph,.profile-photo,.profile .ph{align-self:flex-start;justify-self:start}
+/* v3.3: medium team photos */
+.person img,.person .ph{height:clamp(160px,30vh,240px)}
+@media(max-width:520px){a.person{grid-template-columns:100px 1fr}a.person img,a.person .ph{width:100px;height:auto}}
