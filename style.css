@@ -186,3 +186,65 @@ details.ws .ws-body{padding:0 0 18px 1.2em;max-width:var(--read)}
 details.ws .ws-body p{margin:0 0 .6em}
 [dir=rtl] details.ws .ws-body{padding:0 1.2em 18px 0}
 @media(max-width:600px){details.ws summary{flex-direction:column;gap:2px}details.ws summary .d{padding-inline-start:1.2em}}
+/* ---------- v3 components ---------- */
+.row.r2{grid-template-columns:1fr 1.6fr}
+.row.r3{grid-template-columns:1fr 1.6fr auto}
+@media(max-width:760px){.row.r2,.row.r3{grid-template-columns:1fr}}
+.row .go a{text-decoration:none;font-weight:500}
+.paths>div{padding:4px 0}
+.paths p{color:var(--ink)}
+ul.links{list-style:none;padding:0;margin:0 0 1.4em;border-top:1px solid var(--line)}
+ul.links li{border-bottom:1px solid var(--line)}
+ul.links a{display:block;padding:10px 0;text-decoration:none;font-weight:500}
+ul.plain{list-style:none;padding:0;margin:0 0 1em}
+ul.plain li{padding:10px 0;border-bottom:1px solid var(--line)}
+ol.steps{list-style:none;counter-reset:st;padding:0;margin:0}
+ol.steps li{counter-increment:st;display:grid;grid-template-columns:44px 1fr;gap:0 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+ol.steps li:before{content:counter(st);grid-row:span 2;width:32px;height:32px;border-radius:50%;border:1.5px solid var(--navy);color:var(--navy);display:grid;place-items:center;font-weight:600;font-size:.95rem}
+ol.steps h3{margin:2px 0 4px;font-size:1.05rem}
+ol.steps p{margin:0;color:var(--muted)}
+.dl{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin:1.6em 0}
+.dl p{margin:0}
+.dl-k{font-size:.82rem;color:var(--muted)}
+.dl-t{font-weight:600;color:var(--ink)}
+.dl-d{font-size:.92rem;color:var(--muted)}
+.side-nav .dl{display:block;margin:0}
+.side-nav .dl .btn{margin-top:12px}
+.side-nav ul{list-style:none;padding:0;margin:8px 0 0}
+.side-nav li{padding:6px 0}
+.side-nav li a{text-decoration:none}
+@media(min-width:861px){.side-nav{position:sticky;top:96px;align-self:start}}
+details.faq{border-bottom:1px solid var(--line)}
+details.faq:first-child{border-top:1px solid var(--line)}
+details.faq summary{cursor:pointer;padding:14px 0;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:12px}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary:after{content:"+";color:var(--navy);font-weight:600}
+details.faq[open] summary:after{content:"−"}
+details.faq p{margin:0 0 14px;color:var(--muted)}
+.case{padding:32px 0;border-top:1px solid var(--line)}
+.case h3{font-size:1.35rem;margin-bottom:16px}
+.case-grid{display:grid;grid-template-columns:1fr 1.4fr 1fr;gap:32px}
+.case-grid ul{padding-left:1.1em;margin:0}.case-grid li{margin-bottom:.4em}
+@media(max-width:860px){.case-grid{grid-template-columns:1fr;gap:12px}}
+.label-sm{font-size:.82rem;font-weight:600;color:var(--navy);margin-bottom:.4em}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 32px;margin-top:28px}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr 1fr;gap:28px 18px}}
+@media(max-width:520px){.team-grid{grid-template-columns:1fr}}
+a.person{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+a.person h3{margin:0 0 .15em}
+a.person .role{margin-bottom:.5em}
+a.person .line{flex:1;margin-bottom:.8em}
+a.person .go{color:var(--navy);font-weight:500}
+a.person:hover h3{color:var(--navy)}
+a.person:focus-visible{outline:2px solid var(--navy);outline-offset:4px}
+.profile{display:grid;grid-template-columns:minmax(220px,340px) 1fr;gap:56px;align-items:start}
+.profile-photo,.profile .ph{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--soft)}
+.profile h1{font-size:clamp(1.9rem,3.6vw,2.6rem);margin-bottom:.2em}
+.bg-t{font-size:1rem;margin:1.2em 0 .2em}
+@media(max-width:860px){.profile{grid-template-columns:1fr;gap:24px}.profile-photo{max-width:320px}}
+.page-head .btns{margin-top:1.2em}
+[dir=rtl] ol.steps li{grid-template-columns:44px 1fr}
+[dir=rtl] .case-grid ul{padding-left:0;padding-right:1.1em}
+.site-foot .fcols{grid-template-columns:1.5fr 1fr 1fr 1fr 1.25fr;gap:28px}
+@media(max-width:960px){.site-foot .fcols{grid-template-columns:1fr 1fr}}
+.profile .crumb{margin-bottom:.6em}
